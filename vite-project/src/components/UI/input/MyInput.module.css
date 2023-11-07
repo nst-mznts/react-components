@@ -1,0 +1,13 @@
+.myInput {
+  width: 600px;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  background-color: rgb(233, 233, 233);
+}
+
+.myInput:focus {
+  outline: none;
+}

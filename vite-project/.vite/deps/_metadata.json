@@ -1,0 +1,32 @@
+{
+  "hash": "7c604da0",
+  "browserHash": "ba34781f",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "d035c261",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "8a249046",
+      "needsInterop": true
+    },
+    "nanoid": {
+      "src": "../../node_modules/nanoid/index.browser.js",
+      "file": "nanoid.js",
+      "fileHash": "180829ee",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-ENLGS5T4": {
+      "file": "chunk-ENLGS5T4.js"
+    },
+    "chunk-76J2PTFD": {
+      "file": "chunk-76J2PTFD.js"
+    }
+  }
+}

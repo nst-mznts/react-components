@@ -1,0 +1,9 @@
+.myBtn {
+  background-color: #f0e593;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
