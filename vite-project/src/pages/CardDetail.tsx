@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import CardService from '../API/CardServise';
-//import { ICard } from '../utils/Interface';
+import { ICard } from '../utils/Interface';
 import '../styles/App.css';
 import Loader from '../components/UI/Loader/Loader';
 import MyButton from '../components/UI/button/MyButton';
@@ -10,7 +10,7 @@ import MyButton from '../components/UI/button/MyButton';
 const CardDetail = () => {
   const [searchParams] = useSearchParams();
   const [isCardsLoading, setIsCardsLoading] = useState(false);
-  const [card, setCard] = useState([]);
+  const [card, setCard] = useState<ICard>({} as ICard);
   const page = searchParams.get('page');
   const name = searchParams.get('name');
   const navigate = useNavigate();

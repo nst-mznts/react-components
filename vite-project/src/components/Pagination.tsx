@@ -8,7 +8,7 @@ interface IPaginationProps {
   changePage: (p: number) => void;
   value: number;
   setValue: (value: number) => void;
-  fetch: Promise<void>;
+  fetch: () => Promise<void>;
 }
 
 const Pagination = ({
@@ -39,7 +39,7 @@ const Pagination = ({
             type="number"
             min="1"
             max="50"
-            onChange={(event) => setValue(event.target.value)}
+            onChange={(event) => setValue(Number(event.target.value))}
             className="footer-input"
           />
           <MyButton onClick={fetch}>Set cards</MyButton>

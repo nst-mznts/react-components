@@ -9,8 +9,8 @@ import { ICard } from '../utils/Interface';
 import '../styles/App.css';
 
 const Cards = () => {
-  const [cards, setCards] = useState<ICard>([]);
-  const [searchQuery, setSearchQuery] = useState(
+  const [cards, setCards] = useState<ICard[]>([]);
+  const [searchQuery, setSearchQuery] = useState<string>(
     localStorage.getItem('search') || ''
   );
   const [isCardsLoading, setIsCardsLoading] = useState<boolean>(false);
@@ -25,7 +25,7 @@ const Cards = () => {
     fetchCards();
   }, [page]);
 
-  async function fetchCards(): Promise<void> {
+  async function fetchCards() {
     setIsCardsLoading(true);
     const response = await CardService.getAll(page, limit);
     setCards(response.data);

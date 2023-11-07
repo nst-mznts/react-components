@@ -4,13 +4,13 @@ import MyInput from './UI/input/MyInput';
 import '../styles/App.css';
 
 interface SearchProps {
-  setValue: (arg: string | null) => void;
+  setValue: (arg: string) => void;
 }
 
-type InputEvent = React.ChangeEvent<HTMLInputElement>;
+type InputEvent = ChangeEvent<HTMLInputElement>;
 
 const Search: React.FC<SearchProps> = ({ setValue }: SearchProps) => {
-  const localSearch: string | null = localStorage.getItem('search');
+  const localSearch = localStorage.getItem('search');
   const [inputValue, setInputValue] = useState(localSearch || '');
 
   useEffect(() => {
